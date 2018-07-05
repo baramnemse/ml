@@ -39,6 +39,8 @@ k구역으로 나눠서 트레인과 테스트셋을 정하고 지속적으로 �
 
 # 회귀 / 분류시 알맞은 metric은 무엇일까요?
 
+회귀
+
 Root Mean Square Error (RMSE) : 편차 제곱의 평균에 루트를 씌운 값.
 
 이걸 기준으로 성능을 올리면, 이는 표준편차를 기준으로 하기때문에, 큰 에러를 최대한 줄이는 방향으로 학습을 함.
@@ -53,3 +55,21 @@ mean absolute error (MAE) : 편차에 절대값을 씌운것의 평균
 
 -> ex) 정답이 9인 경우
 8, 8, 8 ,8 보다 9, 9, 6, 9 를 좋게 평가
+
+분류
+
+Accuracy
+
+(TP+TN)/(TP + TN + FP +FN)
+
+Precision
+
+TP/(TP+FP)
+
+Recall
+
+TP / (TP + FN)
+
+F1
+
+2*(Precision*Recall)/(Precision+Recall), Precision과 Recall 계산 분모에 FP와 FN이 있으므로 오탐이 작아야 값이 커진다
