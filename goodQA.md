@@ -117,3 +117,11 @@ http://sherry-data.tistory.com/2
  # 뉴럴넷의 가장 큰 단점은 무엇인가? 이를 위해 나온 One-Shot Learning은 무엇인가?
  
  ‘Matching Networks for One Shot Learning‘
+ 
+ # Weight Initialization 방법에 대해 말해주세요. 그리고 무엇을 많이 사용하나요?
+ 
+ 다음 그래프는 Xavier 초기화 방법과 ReLU 함수를 결합했을 때의 그래프 입니다. 출력값이 0 으로 수렴하고 평균과 표준편차 모두 0으로 수렴하는 모습을 확인할 수 있습니다. ReLU 함수를 사용할 경우에는 Xavier 초기화 방법을 사용할 수 없다는 의미입니다.
+ 
+Sigmoid 나 Tanh 를 사용할 경우에는 Xavier 초기화를 
+
+ReLU 를 사용할 경우에는 He 초기화를 사용하시면 됩니다.
