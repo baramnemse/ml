@@ -1,6 +1,6 @@
 # Perceptron
 
-weight은 입력의 영향도를 결정, bias는 활성화 허들을 조절하는 
+weight은 입력의 영향도를 결정, bias는 활성화 허들을 조절하는 조정자
 
 # 좋은 feature란 무엇인가요. 이 feature의 성능을 판단하기 위한 방법에는 어떤 것이 있나요
 
