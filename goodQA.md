@@ -81,3 +81,8 @@ F1
 미분에 의존하는 Gradient Descent 방식으로 업데이트의 방향을 찾았을때 미분값이 0이 되는곳을 만나면 방향이 없어지므로 탐색이 멈춤 따라서 다른 최적의 해(Global Minima)가 있더라도 Local Minima에 빠지게됨
 
 Local Minima의 새로운 시각 http://darkpgmr.tistory.com/148
+
+# 차원의 저주에 대해 설명해주세요
+
+데이터가 세밀(차원)이 증가할 수록 학습에 더 많은 데이터가 필요하여 학습 성능을 떨어뜨린다.
+
