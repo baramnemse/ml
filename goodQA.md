@@ -106,4 +106,11 @@ http://sherry-data.tistory.com/2
  
  # 왜 갑자기 딥러닝이 부흥했을까요?
  
- 데이터저장, 네트워크, 분산처리 이 모든것을 논리적으로 쉽게 다룰수 있게 해주는 클라우드 기술이 
+ 데이터저장, 네트워크, 분산처리 이 모든것을 논리적으로 쉽게 다룰수 있게 해주는 클라우드 기술이 핵심
+ 
+ # Cost Function과 Activation Function은 무엇인가요
+ 
+ Activation Function 다음 레이어에 입력값으로 변환하기 위한 
+ 
+ Cost Function 현재와 이전의 차를 비교하여 더 나은값을 찾기 위한 측정함수
+ 
