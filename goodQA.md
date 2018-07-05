@@ -125,3 +125,29 @@ http://sherry-data.tistory.com/2
 Sigmoid 나 Tanh 를 사용할 경우에는 Xavier 초기화를 
 
 ReLU 를 사용할 경우에는 He 초기화를 사용하시면 됩니다.
+
+# 요즘 Sigmoid 보다 ReLU를 많이 쓰는데 그 이유는?
+
+선형은 1개의 일정한 기울기를 가지는 반면, 비선형은 1개 이상의 기울기를 가집니다. 즉, 기울기의 변화가 없는 것은 선형, 기울기가 임의의 조건에 의해 변한다면 비선형입니다.
+
+Vanishing gradient problem은 activation function을 선택하는 문제에 의존적으로 일어난다. sigmoid나, tanh 등 요즘 많이들 사용하는 activation function들은 매우 비선형적인 방식으로 그들의 input을 매우 작은 output range로 짓이겨넣는다('squash')
+
+예를 들어서, sigmoid는 실수 범위의 수를 [0, 1]로 맵핑한다. 그 결과로 매우 넓은 input space 지역이 극도로 작은 범위로 맵핑되어버린다.
+
+이렇게 되어 버린 input space에서는 큰 변화가 있다고 하더라도, output에는 작은 변화를 보이게 된다.  gradient(기울기)가 작기 때문이다.
+
+
+
+이러한 현상은 우리가 서로(??)의 꼭대기 층에 그러한 비선형성을 여러개 레이어로 쌓을 때 더욱 악화된다.
+
+예를들어, 첫 레이어에서 넓은 input region을 작은 output region으로 맵핑하고, 그것이 2차 3차 레이어로 갈수록 더 심각하게 작은 region으로 맵핑되는 경우이다.
+
+그 결과로 만약 첫 레이어 input에 대해 매우 큰 변화가 있다고 하더라도 output을 크게 변화시키지 못하게 된다.
+
+
+
+우리는 이러한 문제를 해결하기 위해 짓이겨 넣는식('squashing')의 특징을 갖지 않는 activation function을 사용할 수 있다.
+
+ReLU(Rectified Linear Unit - max(0, x))가 잘 선택되는 편이다.
+
+
