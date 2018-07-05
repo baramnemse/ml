@@ -73,3 +73,11 @@ TP / (TP + FN)
 F1
 
 2*(Precision*Recall)/(Precision+Recall), Precision과 Recall 계산 분모에 FP와 FN이 있으므로 오탐이 작아야 값이 커진다
+
+# 정규화를 왜 해야할까요? 정규화의 방법은 무엇이 있나요?
+
+# Local Minima와 Global Minima에 대해 설명해주세요.
+
+미분에 의존하는 Gradient Descent 방식으로 업데이트의 방향을 찾았을때 미분값이 0이 되는곳을 만나면 방향이 없어지므로 탐색이 멈춤 따라서 다른 최적의 해(Global Minima)가 있더라도 Local Minima에 빠지게됨
+
+Local Minima의 새로운 시각 http://darkpgmr.tistory.com/148
