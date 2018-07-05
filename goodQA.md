@@ -150,4 +150,6 @@ Vanishing gradient problem은 activation function을 선택하는 문제에 의�
 
 ReLU(Rectified Linear Unit - max(0, x))가 잘 선택되는 편이다.
 
+# Deeplearning
 
+https://www.youtube.com/watch?v=n7DNueHGkqE&list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm&index=22
