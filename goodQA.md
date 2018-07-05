@@ -114,3 +114,6 @@ http://sherry-data.tistory.com/2
  
  Cost Function 현재와 이전의 차를 비교하여 더 나은값을 찾기 위한 측정함수
  
+ # 뉴럴넷의 가장 큰 단점은 무엇인가? 이를 위해 나온 One-Shot Learning은 무엇인가?
+ 
+ ‘Matching Networks for One Shot Learning‘
