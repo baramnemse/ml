@@ -2,6 +2,10 @@
 
 weight은 입력의 영향도를 결정, bias는 활성화 허들을 조절하는 조정자
 
+# Multi Layer Perceptron
+
+Hidden Layer의 경우 target값이 없기 때문에 학습할 방법이 없음
+
 # 좋은 feature란 무엇인가요. 이 feature의 성능을 판단하기 위한 방법에는 어떤 것이 있나요
 
 가장 좋은 분석 결과를 만들어내는 데이터의 컬럼, Filter와 Wrapper, Regulation가 있음
