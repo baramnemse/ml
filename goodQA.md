@@ -86,3 +86,24 @@ Local Minima의 새로운 시각 http://darkpgmr.tistory.com/148
 
 데이터가 세밀(차원)이 증가할 수록 학습에 더 많은 데이터가 필요하여 학습 성능을 떨어뜨린다.
 
+# dimension reduction기법으로 보통 어떤 것들이 있나요?
+
+LDA
+
+PCA
+
+LDA PCA 차이 설명 https://wikidocs.net/5957
+
+# PCA는 차원 축소 기법이면서, 데이터 압축 기법이기도 하고, 노이즈 제거기법이기도 합니다. 왜 그런지 설명해주실 수 있나요?
+
+http://sherry-data.tistory.com/2
+
+# 딥러닝은 무엇인가요? 딥러닝과 머신러닝의 차이는?
+
+딥러닝도 머신러닝의 일종, 딥러닝은 인공신경망을 바탕으로 깊어진 레이어를 통해 추상화를 시도하는 알고리즘 집합
+
+ “A fast learning algorithm for deep belief nets”
+ 
+ # 왜 갑자기 딥러닝이 부흥했을까요?
+ 
+ 데이터저장, 네트워크, 분산처리 이 모든것을 논리적으로 쉽게 다룰수 있게 해주는 클라우드 기술이 
