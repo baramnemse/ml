@@ -158,6 +158,8 @@ Vanishing gradient problem은 activation function을 선택하는 문제에 의�
 
 ReLU(Rectified Linear Unit - max(0, x))가 잘 선택되는 편이다.
 
+ReLU의 큰 단점으로 네트워크를 학습할 때 뉴런들이 “죽는”(die) 경우가 발생한다. x<0일 때 기울기가 0이기 때문에 만약 입력값이 0보다 작다면 뉴런이 죽어버릴 수 있으며, 더이상 값이 업데이트 되지 않게 된다.
+
 # Deeplearning
 
 https://www.youtube.com/watch?v=n7DNueHGkqE&list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm&index=22
