@@ -163,3 +163,7 @@ ReLU의 큰 단점으로 네트워크를 학습할 때 뉴런들이 “죽는”
 # Deeplearning
 
 https://www.youtube.com/watch?v=n7DNueHGkqE&list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm&index=22
+
+  * Deep Neural Network, Convolutional NN, Recurrent NN, Deep Q-Networks
+
+  * Multi-Armed Bandit, Collaborative Filtering, Content-based Filtering, Matrix Factorization
