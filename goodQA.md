@@ -167,3 +167,7 @@ https://www.youtube.com/watch?v=n7DNueHGkqE&list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_M
   * Deep Neural Network, Convolutional NN, Recurrent NN, Deep Q-Networks
 
   * Multi-Armed Bandit, Collaborative Filtering, Content-based Filtering, Matrix Factorization
+  
+# Multi-Armed Bandit
+
+http://ishuca.tistory.com/392?category=730862
