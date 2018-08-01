@@ -29,6 +29,8 @@ val df = spark.read.format("csv").option("header", "true").load("c:/2008.csv")
 ```
 
 # Dataframe
+예제에 사용한 데이터 셋 http://stat-computing.org/dataexpo/2009/the-data.html
+
 withColumn(java.lang.String colName, Column col) 특정 컬럼을 추가하거나 바꾼다
 ```
 var newDf = df.withColumn("Year",df.col("Year").cast("int")).withColumn("ArrDelay",df.col("ArrDelay").cast("int"))
@@ -49,5 +51,6 @@ aggDf.cache()
 orderBy 정렬
 ```
 var orderDf = aggDf.orderBy("AVG(ArrDelay)").show() //오름차순
-var orderDf = aggDf.sort($"AVG(ArrDelay)".desc).show() //
+var orderDf = aggDf.sort($"AVG(ArrDelay)".desc).show() //내림차순
+
 ```
