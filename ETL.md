@@ -27,6 +27,8 @@ spark.read
 ```scala
 val df = spark.read.format("csv").option("header", "true").load("c:/2008.csv")
 ```
+# groupBy VS reduceBy
+https://databricks.gitbooks.io/databricks-spark-knowledge-base/content/best_practices/prefer_reducebykey_over_groupbykey.html
 
 # Dataframe
 예제에 사용한 데이터 셋 http://stat-computing.org/dataexpo/2009/the-data.html
