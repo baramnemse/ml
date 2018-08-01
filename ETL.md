@@ -31,6 +31,42 @@ val df = spark.read.format("csv").option("header", "true").load("c:/2008.csv")
 https://databricks.gitbooks.io/databricks-spark-knowledge-base/content/best_practices/prefer_reducebykey_over_groupbykey.html
 
 # Dataframe
+explain(flag) 처리과정을 설명한다
+```
+var s30=bank.filter($"age" >= 30 && $"age" <=39).groupBy("marital").avg("balance").sort(desc("avg(balance)"))
+s30.explain(true)
+
+s30: org.apache.spark.sql.Dataset[org.apache.spark.sql.Row] = [marital: string, avg(balance): double]
+== Parsed Logical Plan ==
+'Sort ['avg(balance) DESC], true
++- Aggregate [marital#545], [marital#545, avg(cast(balance#547 as bigint)) AS avg(balance)#791]
+   +- Filter ((age#543 >= 30) && (age#543 <= 39))
+      +- LogicalRDD [age#543, job#544, marital#545, education#546, balance#547]
+
+== Analyzed Logical Plan ==
+marital: string, avg(balance): double
+Sort [avg(balance)#791 DESC], true
++- Aggregate [marital#545], [marital#545, avg(cast(balance#547 as bigint)) AS avg(balance)#791]
+   +- Filter ((age#543 >= 30) && (age#543 <= 39))
+      +- LogicalRDD [age#543, job#544, marital#545, education#546, balance#547]
+
+== Optimized Logical Plan ==
+Sort [avg(balance)#791 DESC], true
++- Aggregate [marital#545], [marital#545, avg(cast(balance#547 as bigint)) AS avg(balance)#791]
+   +- Project [marital#545, balance#547]
+      +- Filter ((isnotnull(age#543) && (age#543 >= 30)) && (age#543 <= 39))
+         +- LogicalRDD [age#543, job#544, marital#545, education#546, balance#547]
+
+== Physical Plan ==
+*Sort [avg(balance)#791 DESC], true, 0
++- Exchange rangepartitioning(avg(balance)#791 DESC, 200)
+   +- *HashAggregate(keys=[marital#545], functions=[avg(cast(balance#547 as bigint))], output=[marital#545, avg(balance)#791])
+      +- Exchange hashpartitioning(marital#545, 200)
+         +- *HashAggregate(keys=[marital#545], functions=[partial_avg(cast(balance#547 as bigint))], output=[marital#545, sum#799, count#800L])
+            +- *Project [marital#545, balance#547]
+               +- *Filter ((isnotnull(age#543) && (age#543 >= 30)) && (age#543 <= 39))
+                  +- Scan ExistingRDD[age#543,job#544,marital#545,education#546,balance#547]
+```
 예제에 사용한 데이터 셋 http://stat-computing.org/dataexpo/2009/the-data.html
 
 withColumn(java.lang.String colName, Column col) 특정 컬럼을 추가하거나 바꾼다
