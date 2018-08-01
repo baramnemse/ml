@@ -110,6 +110,11 @@ filter
 newDf.groupBy("FlightNum").count.filter($"count">4000).show() //운항횟수가 4천회 이상인 항공기 댓수
 ```
 # Spark SQL
+초기화
+```scala
+import org.apache.spark.sql.SparkSession
+val spark = SparkSession.builder().appName("Spark SQL basic example").config("spark.some.config.option", "some-value").getOrCreate()
+``` 
 HVING과 ORDER BY를 동시에 쓸수 없음
 ```sql
 SELECT count(value) FROM t GROUP BY key HAVING max(value) > 10;
