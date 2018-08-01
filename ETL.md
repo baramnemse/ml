@@ -42,3 +42,11 @@ groupBy(Column... cols) 집게연산을 할수 있게 컬럼을 묶는다.
 var aggDf = newDf.groupBy("FlightNum").agg(sum("ArrDelay"))
 var aggDf = newDf.groupBy("FlightNum").agg(avg("ArrDelay"))
 ```
+cache() 캐싱
+```
+aggDf.cache()
+```
+orderBy 정렬
+```
+var orderDf = newDf.orderBy("AVG(ArrDelay)").show()
+```
