@@ -23,6 +23,11 @@ spark.read
 spark.read
 .option("mode","MALFORMED")
 ```
+# CSV
+```scala
+val df = spark.read.format("csv").option("header", "true").load("c:/2008.csv")
+```
+
 # Dataframe
 withColumn(java.lang.String colName, Column col) 특정 컬럼을 추가하거나 바꾼다
 ```
