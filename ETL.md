@@ -31,6 +31,12 @@ val df = spark.read.format("csv").option("header", "true").load("c:/2008.csv")
 https://databricks.gitbooks.io/databricks-spark-knowledge-base/content/best_practices/prefer_reducebykey_over_groupbykey.html
 
 # Dataframe
+registerTempTable(tableName) 테이블로 메모리에 저장, 다른 노드에서 접근 불가능
+
+saveAsTable()테이블로 디스크에 저장, 모든 노드에서 접근 가능
+```scala
+bank.registerTempTable("bank")
+```
 explain(flag) 처리과정을 설명한다
 ```
 var s30=bank.filter($"age" >= 30 && $"age" <=39).groupBy("marital").avg("balance").sort(desc("avg(balance)"))
