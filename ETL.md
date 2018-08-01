@@ -109,5 +109,21 @@ filter
 ```
 newDf.groupBy("FlightNum").count.filter($"count">4000).show() //운항횟수가 4천회 이상인 항공기 댓수
 ```
+# Spark SQL
+HVING과 ORDER BY를 동시에 쓸수 없음
+```sql
+SELECT count(value) FROM t GROUP BY key HAVING max(value) > 10;
+SELECT count(value) FROM t GROUP BY key HAVING key > 10;
+
+SELECT count(value) FROM t GROUP BY key ORDER BY max(value);
+
+SELECT count(value) FROM t GROUP BY key ORDER BY key;
+
+But these don't:
+
+SELECT count(value) FROM t GROUP BY key HAVING max(value) > 10 ORDER BY max(value);
+SELECT count(value) FROM t GROUP BY key HAVING max(value) > 10 ORDER BY key;
+```
+
 # 스파크 인터뷰 질문, 개념이해용으로 
 https://tekslate.com/spark-interview-questions/
