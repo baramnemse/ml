@@ -59,3 +59,7 @@ distinct 유니크한 Row만 리턴
 ```
 newDf.select("FlightNum").distinct.count //운항하는 항공기의 댓수
 ```
+filter 
+```
+newDf.groupBy("FlightNum").count.filter($"count">4000).show() //운항횟수가 4천회 이상인 항공기 댓수
+```
