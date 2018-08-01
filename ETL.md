@@ -32,3 +32,4 @@ var newDf = df.withColumn("Time",df.col("Time").cast("int"))
 root
  |-- Time: integer (nullable = true)
 ```
+groupBy(Column... cols) 집게연산을 할수 있게 컬럼을 묶는다.
