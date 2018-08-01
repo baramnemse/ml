@@ -55,7 +55,7 @@ var orderDf = aggDf.orderBy("AVG(ArrDelay)").show() //오름차순
 var orderDf = aggDf.sort($"AVG(ArrDelay)".desc).show() //내림차순
 var aggDf = newDf.groupBy("FlightNum").count.sort(desc("count")).show() //비행횟수가 많은순으로 
 ```
-distinct
+distinct 유니크한 Row만 리턴
 ```
-newDf.select("FlightNum").distinct.count //운항하는 항공기의 
+newDf.select("FlightNum").distinct.count //운항하는 항공기의 댓수
 ```
