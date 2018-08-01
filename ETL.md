@@ -31,13 +31,13 @@ val df = spark.read.format("csv").option("header", "true").load("c:/2008.csv")
 # Dataframe
 withColumn(java.lang.String colName, Column col) 특정 컬럼을 추가하거나 바꾼다
 ```
-var newDf = df.withColumn("Time",df.col("Time").cast("int"))
+var newDf = df.withColumn("Year",df.col("Year").cast("int")).withColumn("ArrDelay",df.col("ArrDelay").cast("int"))
 ```
 ```
 root
- |-- Time: integer (nullable = true)
+ |-- Year: integer (nullable = true)
 ```
 groupBy(Column... cols) 집게연산을 할수 있게 컬럼을 묶는다.
 ```
-var aggDf = newDf.groupBy("Time").agg(sum("Time"))
+var aggDf = newDf.groupBy("FlightNum").agg(sum("ArrDelay"))
 ```
