@@ -49,5 +49,5 @@ aggDf.cache()
 orderBy 정렬
 ```
 var orderDf = aggDf.orderBy("AVG(ArrDelay)").show() //오름차순
-averageDelays.sort($"AVG(ArrDelay)".desc).show() //
+var orderDf = aggDf.sort($"AVG(ArrDelay)".desc).show() //
 ```
