@@ -36,6 +36,7 @@ registerTempTable(tableName) 테이블로 메모리에 저장, 다른 노드에�
 saveAsTable()테이블로 디스크에 저장, 모든 노드에서 접근 가능
 ```scala
 bank.registerTempTable("bank")
+spark.sql("SELECT * FROM bank")
 ```
 explain(flag) 처리과정을 설명한다
 ```
