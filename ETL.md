@@ -41,8 +41,9 @@ root
 ```
 groupBy(Column... cols) 집게연산을 할수 있게 컬럼을 묶는다.
 ```
-var aggDf = newDf.groupBy("FlightNum").agg(sum("ArrDelay"))
-var aggDf = newDf.groupBy("FlightNum").agg(avg("ArrDelay"))
+var aggDf = newDf.groupBy("FlightNum").agg(sum("ArrDelay")) // 총 지연시간
+var aggDf = newDf.groupBy("FlightNum").agg(avg("ArrDelay")) // 평균 지연시간
+var aggDf = newDf.groupBy("FlightNum").count.show() //비행횟수
 ```
 cache() 캐싱
 ```
