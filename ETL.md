@@ -124,6 +124,10 @@ But these don't:
 SELECT count(value) FROM t GROUP BY key HAVING max(value) > 10 ORDER BY max(value);
 SELECT count(value) FROM t GROUP BY key HAVING max(value) > 10 ORDER BY key;
 ```
+다음과 같이 SQL과 Dataframe 메소드로는 섞어서 쓸수 있음
+```
+spark.sql("SELECT marital, AVG(balance) FROM bank WHERE age >=30 AND age <=39 GROUP BY marital HAVING avg(balance) > 30").sort(desc("avg(balance)")).show
+```
 
 # 스파크 인터뷰 질문, 개념이해용으로 
 https://tekslate.com/spark-interview-questions/
