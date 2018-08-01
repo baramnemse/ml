@@ -23,3 +23,12 @@ spark.read
 spark.read
 .option("mode","MALFORMED")
 ```
+# Dataframe
+withColumn(java.lang.String colName, Column col) 특정 컬럼을 추가하거나 바꾼다
+```
+var newDf = df.withColumn("Time",df.col("Time").cast("int"))
+```
+```
+root
+ |-- Time: integer (nullable = true)
+```
