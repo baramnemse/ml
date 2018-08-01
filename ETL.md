@@ -33,3 +33,6 @@ root
  |-- Time: integer (nullable = true)
 ```
 groupBy(Column... cols) 집게연산을 할수 있게 컬럼을 묶는다.
+```
+var aggDf = newDf.groupBy("Time").agg(sum("Time"))
+```
