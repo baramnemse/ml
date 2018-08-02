@@ -31,6 +31,14 @@ val df = spark.read.format("csv").option("header", "true").load("c:/2008.csv")
 https://databricks.gitbooks.io/databricks-spark-knowledge-base/content/best_practices/prefer_reducebykey_over_groupbykey.html
 
 # Dataframe
+createGlobalTempView(viewName) 다른 스파크 어플리케이션에서도 억세스 가능, 해당 뷰를 만든 세션이 종료되면 삭제됨
+```scala
+// Register the DataFrame as a global temporary view
+df.createGlobalTempView("people")
+
+// Global temporary view is tied to a system preserved database `global_temp`
+spark.sql("SELECT * FROM global_temp.people").show()
+```
 registerTempTable(tableName) 테이블로 메모리에 저장, 다른 노드에서 접근 불가능
 
 saveAsTable()테이블로 디스크에 저장, 모든 노드에서 접근 가능
