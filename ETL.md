@@ -31,6 +31,18 @@ val df = spark.read.format("csv").option("header", "true").load("c:/2008.csv")
 https://databricks.gitbooks.io/databricks-spark-knowledge-base/content/best_practices/prefer_reducebykey_over_groupbykey.html
 
 # Dataframe
+debugCodegen 어떻게 쿼리가 실행되는지 자바코드로 볼 수 있다.
+```scala
+import org.apache.spark.sql.execution.debug._
+etlM.select("Sport").except(etlF.select("Sport")).debugCodegen
+
+Generated code:
+/* 001 */ public Object generate(Object[] references) {
+/* 002 */   return new GeneratedIterator(references);
+/* 003 */ }
+/* 004 */
+/* 005 */ final class GeneratedIterator extends org.apache.spark.sql.execution.BufferedRowIterator {
+```
 createGlobalTempView(viewName) 다른 스파크 어플리케이션에서도 억세스 가능, 해당 뷰를 만든 세션이 종료되면 삭제됨
 ```scala
 // Register the DataFrame as a global temporary view
