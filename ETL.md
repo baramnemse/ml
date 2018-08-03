@@ -30,6 +30,10 @@ val df = spark.read.format("csv").option("header", "true").load("c:/2008.csv")
 # groupBy VS reduceBy
 https://databricks.gitbooks.io/databricks-spark-knowledge-base/content/best_practices/prefer_reducebykey_over_groupbykey.html
 
+# Dataset
+case class GameRecord(Year:Integer, City:String, Sport:String, Discipline:String, Athlete:String, Country:String, Gender:String, Event:String, Medal:String)
+val ds = spark.read.format("csv").option("inferSchema", "true").option("header", "true").load("c:/summer.csv").as[GameRecord]
+
 # Dataframe
 debugCodegen 어떻게 쿼리가 실행되는지 자바코드로 볼 수 있다.
 ```scala
