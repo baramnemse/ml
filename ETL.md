@@ -3,6 +3,10 @@ Spark는 트랜스포매이션과 엑션으로 연산이 나뉨, 엑션은 실�
 
 https://data-flair.training/blogs/apache-spark-lazy-evaluation/
 
+http://spark.apache.org/docs/latest/rdd-programming-guide.html#transformations
+
+http://spark.apache.org/docs/latest/rdd-programming-guide.html#actions
+
 # DAG vs RDD Lineage
 
 - DAG physical execution plan
