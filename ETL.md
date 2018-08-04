@@ -1,3 +1,15 @@
+# Lazy Evaluation in Apache Spark
+Spark는 트랜스포매이션과 엑션으로 연산이 나뉨, 엑션은 실제 답을 구하는 count와 save등의 연산을 뜻함. 스파크는 엑션 실행 전까지 실제 연산을 지연시키고 DAG(Directed Acyclic Graph)로 관리하다 엑션이 수행될때 모든 연산이 실제로 실행됨. 이를 통해 최적화를 수행할 수 있음
+
+https://data-flair.training/blogs/apache-spark-lazy-evaluation/
+
+# DAG vs RDD Lineage
+
+- DAG physical execution plan
+- RDD Lineage logical execution plan
+
+https://www.quora.com/What-is-the-difference-between-RDD-Lineage-Graph-and-Directed-Acyclic-Graph-DAG-in-Spark
+
 # Cluster Resources
 노드마다 Yarn/Hadoop이 사용할 수 있는 1Core와 메모리1GB가 필요
 ```
