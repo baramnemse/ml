@@ -5,6 +5,9 @@
 --executor-memory/spark.executor.memory => executor의 memory 용량
 --num-executor/spark.executor.instances => executor 개수
 ```
+분산환경에서 사용할 수 있는 우버의 자바 프로파일러
+
+https://eng.uber.com/jvm-profiler/
 # Spark Memory
 메모리 문제는 다음 영역중 하나의 문제, 특히 RDD와 Shuffle메모리가 부족할 경우 디스크 IO를 사용하므로 성능저하가 일어남
 - RDD 60% spark.storage.memoryFraction
