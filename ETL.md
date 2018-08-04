@@ -1,4 +1,5 @@
 # Spark Memory
+메모리 문제는 다음 영역중 하나의 문제, 특히 RDD와 Shuffle메모리가 부족할 경우 디스크 IO를 사용하므로 성능저하가 일어남
 - RDD 60% spark.storage.memoryFraction
 - Shuffle 20% spark.shuffle.memoryFraction
 - Application 20%
