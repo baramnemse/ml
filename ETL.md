@@ -101,7 +101,7 @@ Sort [avg(balance)#791 DESC], true
                   +- Scan ExistingRDD[age#543,job#544,marital#545,education#546,balance#547]
 ```
 flatmap 인풋을 단일 컬렉션으로 바꿈
-```
+```scala
 val x = sc.parallelize(List("spark rdd example",  "sample example"), 2)
  
 // map operation will return Array of Arrays in following case : check type of res0
