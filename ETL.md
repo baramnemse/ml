@@ -2,7 +2,7 @@
 
 https://hackernoon.com/managing-spark-partitions-with-coalesce-and-repartition-4050c57ad5c4
 
-다의 파티션을 사용하는 규모 있는 원본 데이터(10억 rows)에서 일부(2000 rows)를 취해도 원본데이터의 파티션 갯수(10000)가 유지된다.
+다수의 파티션을 사용하는 규모 있는 원본 데이터(10억 rows)에서 일부(2000 rows)를 취해도 원본데이터의 파티션 갯수(10000)가 유지된다.
 
 DATAFRAME.rdd.partitions.size 로 파티션 사이즈 알 수 있음
 
