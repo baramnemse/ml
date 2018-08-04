@@ -4,6 +4,12 @@
 - Shuffle 20% spark.shuffle.memoryFraction
 - Application 20%
 
+# Distribution of Executors, Cores and Memory
+
+https://spoddutur.github.io/spark-notes/distribution_of_executors_cores_and_memory_for_spark_application.html
+```shell
+spark-submit --class <CLASS_NAME> --num-executors ? --executor-cores ? --executor-memory ?
+```
 # Managing Spark Partitions with Coalesce and Repartition
 
 https://hackernoon.com/managing-spark-partitions-with-coalesce-and-repartition-4050c57ad5c4
