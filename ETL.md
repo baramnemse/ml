@@ -187,9 +187,10 @@ var aggDf = newDf.groupBy("FlightNum").agg(avg("ArrDelay")) // 평균 지연시�
 var aggDf = newDf.groupBy("FlightNum").count.show() //비행횟수
 var aggDf = newDf.groupBy("FlightNum").agg(max("ArrDelay")) // 최대 
 ```
-cache() 캐싱
+persist() 캐싱
 ```
-aggDf.cache()
+aggDf.persist(MEMORY_ONLY_SER)
+aggDf.unpersist()
 ```
 orderBy 정렬
 ```
