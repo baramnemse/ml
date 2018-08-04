@@ -29,6 +29,7 @@ val df = spark.read.format("csv").option("header", "true").load("c:/2008.csv")
 ```
 # groupBy VS reduceBy
 reduceBy의 셔플량이 작아서 메모리 사용과 속도가 빨라짐
+
 https://databricks.gitbooks.io/databricks-spark-knowledge-base/content/best_practices/prefer_reducebykey_over_groupbykey.html
 
 # Dataset
