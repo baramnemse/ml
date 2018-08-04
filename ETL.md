@@ -100,6 +100,22 @@ Sort [avg(balance)#791 DESC], true
                +- *Filter ((isnotnull(age#543) && (age#543 >= 30)) && (age#543 <= 39))
                   +- Scan ExistingRDD[age#543,job#544,marital#545,education#546,balance#547]
 ```
+map 예외처리
+```scala
+def plus(num:Integer):Integer = {
+    if(num>3)throw new Exception
+    num+1
+}
+List(1,2,3,4).map(x =>{
+    try { 
+    plus(x)
+  } catch {
+    case e : Exception =>
+    // Log error
+    None
+  }
+})
+```
 flatmap 인풋을 단일 컬렉션으로 바꿈
 ```scala
 val x = sc.parallelize(List("spark rdd example",  "sample example"), 2)
