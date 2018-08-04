@@ -28,6 +28,7 @@ spark.read
 val df = spark.read.format("csv").option("header", "true").load("c:/2008.csv")
 ```
 # groupBy VS reduceBy
+reduceBy의 셔플량이 작아서 메모리 사용과 속도가 빨라짐
 https://databricks.gitbooks.io/databricks-spark-knowledge-base/content/best_practices/prefer_reducebykey_over_groupbykey.html
 
 # Dataset
@@ -98,6 +99,22 @@ Sort [avg(balance)#791 DESC], true
             +- *Project [marital#545, balance#547]
                +- *Filter ((isnotnull(age#543) && (age#543 >= 30)) && (age#543 <= 39))
                   +- Scan ExistingRDD[age#543,job#544,marital#545,education#546,balance#547]
+```
+flatmap 인풋을 단일 컬렉션으로 바꿈
+```
+val x = sc.parallelize(List("spark rdd example",  "sample example"), 2)
+ 
+// map operation will return Array of Arrays in following case : check type of res0
+val y = x.map(x => x.split(" ")) // split(" ") returns an array of words
+y.collect
+// res0: Array[Array[String]] = 
+//  Array(Array(spark, rdd, example), Array(sample, example))
+ 
+// flatMap operation will return Array of words in following case : Check type of res1
+val y = x.flatMap(x => x.split(" "))
+y.collect
+//res1: Array[String] = 
+//  Array(spark, rdd, example, sample, example)
 ```
 예제에 사용한 데이터 셋 http://stat-computing.org/dataexpo/2009/the-data.html
 
