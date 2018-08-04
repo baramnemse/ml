@@ -1,3 +1,8 @@
+# Spark Memory
+- RDD 60% spark.storage.memoryFraction
+- Shuffle 20% spark.shuffle.memoryFraction
+- Application 20%
+
 # Managing Spark Partitions with Coalesce and Repartition
 
 https://hackernoon.com/managing-spark-partitions-with-coalesce-and-repartition-4050c57ad5c4
