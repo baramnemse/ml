@@ -1,3 +1,10 @@
+# Cluster Resources
+노드마다 Yarn/Hadoop이 사용할 수 있는 1Core와 메모리1GB가 필요
+```
+--executor-cores/spark.executor.cores => executor의 core 개수
+--executor-memory/spark.executor.memory => executor의 memory 용량
+--num-executor/spark.executor.instances => executor 개수
+```
 # Spark Memory
 메모리 문제는 다음 영역중 하나의 문제, 특히 RDD와 Shuffle메모리가 부족할 경우 디스크 IO를 사용하므로 성능저하가 일어남
 - RDD 60% spark.storage.memoryFraction
