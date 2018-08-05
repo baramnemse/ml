@@ -269,3 +269,6 @@ broadcastVar: org.apache.spark.broadcast.Broadcast[Array[Int]] = Broadcast(0)
 scala> broadcastVar.value
 res0: Array[Int] = Array(1, 2, 3)
 ```
+# DStreams
+- stateless transformations 이전 배치와 상관 없는 형태
+- Stateful transformations 이전 배치의 데이터나 결과를 사용하는 형태
