@@ -254,3 +254,18 @@ https://tekslate.com/spark-interview-questions/
 # Catalyst
 
 https://databricks.com/session/a-deep-dive-into-spark-sqls-catalyst-optimizer
+
+# Accumerator vs Broadcast Variable
+노드간 증가하는 데이터를 공유할때
+```scala
+var accum = spark.sparkContext.longAccumulator("counter")
+accum.add(3)
+```
+노드간 변하지 않는 데이터를 공유할때, 수정 불가
+```scala
+scala> val broadcastVar = sc.broadcast(Array(1, 2, 3))
+broadcastVar: org.apache.spark.broadcast.Broadcast[Array[Int]] = Broadcast(0)
+
+scala> broadcastVar.value
+res0: Array[Int] = Array(1, 2, 3)
+```
