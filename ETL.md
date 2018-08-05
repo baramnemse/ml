@@ -39,6 +39,13 @@ spark-submit --class <CLASS_NAME> --num-executors ? --executor-cores ? --executo
 # Broadcasting Join
 큰데이터와 작은 데이터를 조인할떄 작은 데이터를 브로드케스팅 배리어블로 지정하고 조인하면 셔플을 획기적으로 줄일수 있음
 
+# Salting
+Skewed Data : 특정키가 매우 큰 데이터
+
+매출 데이터에서 특정 점포의 데이터가 전체의 80% 차지하는 경우 다른 executor는 빠르게 처리되지만 다수의 키를 가지고있는 데이터를 처리하는 executor가 병목이됨
+
+이를 처리하기 위해서는 키에 추가 문자를 더해서 키를 분산시키면됨, Key1 Key2 Key3 Key4
+
 # Managing Spark Partitions with Coalesce and Repartition
 
 https://hackernoon.com/managing-spark-partitions-with-coalesce-and-repartition-4050c57ad5c4
