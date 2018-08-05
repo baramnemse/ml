@@ -286,3 +286,7 @@ res0: Array[Int] = Array(1, 2, 3)
 # Realtime Map/Reduce vs Event Driven Microservice
 
 https://www.youtube.com/watch?v=I32hmY4diFY
+
+https://mapr.com/blog/event-driven-microservices-patterns/
+
+https://mapr.com/products/polyglot-persistence/
