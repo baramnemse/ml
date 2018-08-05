@@ -250,3 +250,7 @@ https://tekslate.com/spark-interview-questions/
 6. action 연산을 만나면 실제로 각 executor 에 일을 분산하여 보냄
 7. 최종 결과를 다시 driver 에 전달
 8. 자원 반환
+
+# Catalyst
+
+https://databricks.com/session/a-deep-dive-into-spark-sqls-catalyst-optimizer
