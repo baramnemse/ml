@@ -237,3 +237,16 @@ spark.sql("SELECT marital, AVG(balance) FROM bank WHERE age >=30 AND age <=39 GR
 
 # 스파크 인터뷰 질문, 개념이해용으로 
 https://tekslate.com/spark-interview-questions/
+
+# RDD (Resilient Distributed Datasets)
+스파크의 기본 데이터 추상화, read-only, fault-tolerance node fail시 rdd lineage를 통해 데이터 복구
+
+# Spark Flow
+1. Driver 에서 어플리케이션 실행
+2. 스파크 세션 생성
+3. 메니저에서 자원 활당
+4. executor 생성
+5. transformation 연산으로 부터 DAG 생성
+6. action 연산을 만나면 실제로 각 executor 에 일을 분산하여 보냄
+7. 최종 결과를 다시 driver 에 전달
+8. 자원 반환
