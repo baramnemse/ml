@@ -36,6 +36,9 @@ https://spoddutur.github.io/spark-notes/distribution_of_executors_cores_and_memo
 ```shell
 spark-submit --class <CLASS_NAME> --num-executors ? --executor-cores ? --executor-memory ?
 ```
+# Broadcasting Join
+큰데이터와 작은 데이터를 조인할떄 작은 데이터를 브로드케스팅 배리어블로 지정하고 조인하면 셔플을 획기적으로 줄일수 있음
+
 # Managing Spark Partitions with Coalesce and Repartition
 
 https://hackernoon.com/managing-spark-partitions-with-coalesce-and-repartition-4050c57ad5c4
