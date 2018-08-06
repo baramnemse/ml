@@ -266,12 +266,12 @@ https://tekslate.com/spark-interview-questions/
 https://databricks.com/session/a-deep-dive-into-spark-sqls-catalyst-optimizer
 
 # Accumerator vs Broadcast Variable
-노드간 증가하는 데이터를 공유할때, 노드에서 읽을수는 없음, 비정상 데이터 카운트
+노드간 증가하는 데이터를 공유할때, 노드에서 읽을수는 없음, 비정상 데이터 카운트, driver에서만 읽을수 있음
 ```scala
 var accum = spark.sparkContext.longAccumulator("counter")
 accum.add(3)
 ```
-노드간 변하지 않는 데이터를 공유할때, 수정 불가, 원본 데이터에 없는 코드 공유시
+노드간 변하지 않는 데이터를 공유할때, 수정 불가, 원본 데이터에 없는 코드 공유시, 변경되더라도 전파안됨
 ```scala
 scala> val broadcastVar = sc.broadcast(Array(1, 2, 3))
 broadcastVar: org.apache.spark.broadcast.Broadcast[Array[Int]] = Broadcast(0)
