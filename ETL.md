@@ -292,7 +292,7 @@ https://mapr.com/blog/event-driven-microservices-patterns/
 https://mapr.com/products/polyglot-persistence/
 
 # mapPartitions, mapPartitionsWithIndex
-파티션별로 한번의 초기화
+파티션별로 한번의 초기화, 각 파티션별로 한번의 초기화를 통해 http나 kafka 를 이용 실시간 모니터링 가능
 ```scala
 val mapped =   rdd1.mapPartitionsWithIndex{
                         // 'index' represents the Partition No
@@ -300,10 +300,8 @@ val mapped =   rdd1.mapPartitionsWithIndex{
                         //                         in the partition
                         (index, iterator) => {
                            println("Called in Partition -> " + index)
+                           //초기화 구문
                            val myList = iterator.toList
-                           // In a normal user case, we will do the
-                           // the initialization(ex : initializing database)
-                           // before iterating through each element
                            myList.map(x => x + " -> " + index).iterator
                         }
                      }
