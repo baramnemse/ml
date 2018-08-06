@@ -290,3 +290,21 @@ https://www.youtube.com/watch?v=I32hmY4diFY
 https://mapr.com/blog/event-driven-microservices-patterns/
 
 https://mapr.com/products/polyglot-persistence/
+
+# mapPartitions, mapPartitionsWithIndex
+파티션별로 한번의 초기화
+```scala
+val mapped =   rdd1.mapPartitionsWithIndex{
+                        // 'index' represents the Partition No
+                        // 'iterator' to iterate through all elements
+                        //                         in the partition
+                        (index, iterator) => {
+                           println("Called in Partition -> " + index)
+                           val myList = iterator.toList
+                           // In a normal user case, we will do the
+                           // the initialization(ex : initializing database)
+                           // before iterating through each element
+                           myList.map(x => x + " -> " + index).iterator
+                        }
+                     }
+ ```
