@@ -309,4 +309,7 @@ val mapped =   rdd1.mapPartitionsWithIndex{
 
 # RDD, Dataframe, Dataset
 
+RDD JavaObject GC 위험
+Dataframe, Dataset off heap 사용 
+
 ![](https://databricks.com/wp-content/uploads/2016/07/sql-vs-dataframes-vs-datasets-type-safety-spectrum.png)
