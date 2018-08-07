@@ -334,3 +334,7 @@ spark.unsafe.sorter.spill.reader.buffer.size=1MB
 SparkLint
 
 Spark History Server
+
+# Spark Optimizing Join
+
+https://www.youtube.com/watch?v=fp53QhSfQcI
