@@ -7,6 +7,10 @@ http://spark.apache.org/docs/latest/rdd-programming-guide.html#transformations
 
 http://spark.apache.org/docs/latest/rdd-programming-guide.html#actions
 
+# Job, Task
+
+![](https://jaceklaskowski.gitbooks.io/mastering-apache-spark/diagrams/job-stage.png)
+
 # DAG vs RDD Lineage
 
 - RDD Lineage logical execution plan
