@@ -9,8 +9,13 @@ http://spark.apache.org/docs/latest/rdd-programming-guide.html#actions
 
 # DAG vs RDD Lineage
 
-- DAG physical execution plan
 - RDD Lineage logical execution plan
+
+우리가 짠 코드에 해당함, 결과물을 얻기 위한 스텝
+
+- DAG physical execution plan
+
+분석을 어떻게 나누고 실행할지 결정하는 스케줄러
 
 https://www.quora.com/What-is-the-difference-between-RDD-Lineage-Graph-and-Directed-Acyclic-Graph-DAG-in-Spark
 
