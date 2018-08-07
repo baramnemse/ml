@@ -314,3 +314,19 @@ RDD JavaObject GC 위험
 Dataframe, Dataset off heap 사용 
 
 ![](https://databricks.com/wp-content/uploads/2016/07/sql-vs-dataframes-vs-datasets-type-safety-spectrum.png)
+
+# Large Cluster
+https://www.youtube.com/watch?v=5dga0UT4RI8
+
+rpc server
+
+spark.rpc.io.serverThread = 64
+
+Executor Tuning
+
+spark.memory.offHeap.enable = true
+
+Disk IO Tuning
+spark.shuffle.file.buffer =1MB
+spark.unsafe.sorter.spill.reader.buffer.size=1MB
+
