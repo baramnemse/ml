@@ -330,3 +330,7 @@ Disk IO Tuning
 spark.shuffle.file.buffer =1MB
 spark.unsafe.sorter.spill.reader.buffer.size=1MB
 
+# Monitoring
+SparkLint
+
+Spark History Server
