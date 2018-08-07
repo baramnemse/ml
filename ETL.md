@@ -7,9 +7,11 @@ http://spark.apache.org/docs/latest/rdd-programming-guide.html#transformations
 
 http://spark.apache.org/docs/latest/rdd-programming-guide.html#actions
 
-# Job, Task
+# DAGScheduler — Stage-Oriented Scheduler
 
 ![](https://jaceklaskowski.gitbooks.io/mastering-apache-spark/diagrams/job-stage.png)
+
+![](https://jaceklaskowski.gitbooks.io/mastering-apache-spark/images/dagscheduler-rdd-lineage-stage-dag.png)
 
 # DAG vs RDD Lineage
 
