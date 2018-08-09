@@ -89,6 +89,10 @@ spark.read
 ```scala
 val df = spark.read.format("csv").option("header", "true").load("c:/2008.csv")
 ```
+컬럼에서 "안에 "을 쓸 경우 제대로 파싱하기 위한 옵션
+```scala
+.option("quote","\"").option("escape","\"")
+```
 # groupBy VS reduceBy
 reduceBy의 셔플량이 작아서 메모리 사용과 속도가 빨라짐
 
