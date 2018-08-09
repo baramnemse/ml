@@ -353,3 +353,7 @@ https://www.youtube.com/watch?v=fp53QhSfQcI
 # treeReduce vs reduce, treeAggregate vs aggregate
 
 reduce는 연산결과를 driver로 보내기 때문에 밴드위스가 보틀넥이 될수 있음 treeReduce는 driver가 아닌 executor에게 보내므로 병목이 줄어듬
+
+# Combiner
+
+http://timepasstechies.com/spark-combinebykey-example-scala-java/
